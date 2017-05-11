@@ -1,0 +1,97 @@
+from nanpy import ArduinoApi
+from nanpy import SerialManager
+import serial
+import struct
+import time
+from time import sleep
+import datetime
+from nanpy.sockconnection import SocketManager
+
+connection = SerialManager()
+a = ArduinoApi(connection=connection)
+
+
+#switchPin2 = 3;
+#switchPin3 = 4;
+#switchPin4 = 5;
+#Board1.pinMode(switchPin1, Board1.OUTPUT)
+#Board1.pinMode(switchPin2, Board1.OUTPUT)
+#Board1.pinMode(switchPin3, Board1.OUTPUT)
+#Board1.pinMode(switchPin4, Board1.OUTPUT)
+
+a.pinMode(2, a.OUTPUT)
+a.pinMode(3, a.OUTPUT)
+a.pinMode(4, a.OUTPUT)
+a.pinMode(5, a.OUTPUT)
+a.digitalWrite(2, 1)
+a.digitalWrite(3, 1)
+a.digitalWrite(4, 1)
+a.digitalWrite(5, 1)
+
+#Moist = 0;
+#Board1.pinMode(Moist, Board1.INPUT)
+ 
+
+##def relayON():
+  ##  a.digitalWrite(13, (i + 1) % 2)
+   ## sleep(0.2)
+    ##print ("Relay 1 is on")          
+
+##def relayOFF():
+  ##  Board1.digitalWrite(2,LOW)
+    ##print ("Relay 1 is off")
+
+print ("Connecting to Arduino....")
+time.sleep(1)
+print ("Handshake:Good")
+time.sleep(1)
+print ("Ready to Submit")
+
+
+valid = True;
+
+while valid:
+    choice = int(input("Select color:"))
+    if (choice == 1):
+        a.digitalWrite(2, 1)
+        print ("Relay 1 is ON")
+	if (a.pinMode(2, a.OUTPUT) == 1)
+		print ("Relay 1 already ON")
+	else: 
+        sleep(0.2)
+    elif (choice == 2):
+        a.digitalWrite(2, 0)
+        print ("Relay 1 is OFF")
+        sleep(0.2)
+    elif (choice == 3):
+        a.digitalWrite(3, 1)
+        print ("Relay 2 is ON")
+        sleep(0.2)
+    elif (choice == 4):
+        a.digitalWrite(3, 0)
+        print ("Relay 2 is OFF")
+        sleep(0.2)
+    elif (choice == 5):
+        a.digitalWrite(4, 1)
+        print ("Relay 3 is ON")
+        sleep(0.2)
+    elif (choice == 6):
+        a.digitalWrite(4, 0)
+        print ("Relay 3 is OFF")
+        sleep(0.2)
+    elif (choice == 7):
+        a.digitalWrite(5, 1)
+        print ("Relay 4 is ON")
+        sleep(0.2)
+    elif (choice == 8):
+        a.digitalWrite(5, 0)
+        print ("Relay 4 is ON")
+        sleep(0.2)
+    else:
+        print ("Please try again")
+    
+
+
+
+
+
