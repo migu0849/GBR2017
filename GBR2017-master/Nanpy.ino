@@ -1,4 +1,6 @@
- #include "cfg_all.h"
+#include <Arduino.h>
+
+#include <cfg_all.h>
 
 
 #if USE_EEPROM

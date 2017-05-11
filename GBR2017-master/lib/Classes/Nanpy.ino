@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 #include "cfg_all.h"
 
 
