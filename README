@@ -1,3 +1,7 @@
 In this GitHub Repo, There are two set-ups, Ard and Pi. Both of these are dedicated to their own uploads. Ard is being uploaded first. 
 
 Pi will be uploaded once Json has been added into the code for Firebase data collection.
+
+If Ard is going to be modified in the future with more add-ons, it is best to be done on Atom Text editor with the correct pugins.
+
+Once the plug-ins are correctly installed, move the Ard folder into the correct site location within the documents and reference it correctly when it is time for upload.
